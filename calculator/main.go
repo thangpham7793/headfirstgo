@@ -34,18 +34,16 @@ func calculate(operands []float64, operations []string) (number.Number, error) {
 
 	res := number.Number(operands[0])
 
-	p := &res
-
 	for i := 1; i < len(operands); i++ {
 		switch operations[i-1] {
 		case "+":
-			p.Add(operands[i])
+			res.Add(operands[i])
 		case "-":
-			p.Substract(operands[i])
+			res.Substract(operands[i])
 		case "*", "x":
-			p.Multiply(operands[i])
+			res.Multiply(operands[i])
 		case "/":
-			p.Divide(operands[i])
+			res.Divide(operands[i])
 		default:
 			return 0, fmt.Errorf(`invalid operation "%s"`, operations[i/2])
 		}
