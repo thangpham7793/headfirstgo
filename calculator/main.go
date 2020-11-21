@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/thangpham7793/headfirstgo/calculator/number"
+	"headfirstgo/calculator/number" //this means it must be inside GOPATH though
 )
 
 func splitArgs(args []string) (operands []float64, operations []string, err error) {
@@ -34,16 +34,19 @@ func splitArgs(args []string) (operands []float64, operations []string, err erro
 func calculate(operands []float64, operations []string) (number.Number, error) {
 
 	res := number.Number(operands[0])
+
+	p := &res
+
 	for i := 1; i < len(operands); i++ {
 		switch operations[i-1] {
 		case "+":
-			res = res.Add(operands[i])
+			p.Add(operands[i])
 		case "-":
-			res = res.Substract(operands[i])
+			p.Substract(operands[i])
 		case "*", "x":
-			res = res.Multiply(operands[i])
+			p.Multiply(operands[i])
 		case "/":
-			res = res.Divide(operands[i])
+			p.Divide(operands[i])
 		default:
 			return 0, fmt.Errorf(`invalid operation "%s"`, operations[i/2])
 		}
@@ -58,7 +61,6 @@ func printRes(res number.Number, args []string) {
 func main() {
 
 	//using * will make bash interpret it as all args though, need to escape it or not use it at all
-
 	args := os.Args[1:]
 	operands, operations, err := splitArgs(args)
 
@@ -73,8 +75,4 @@ func main() {
 	}
 
 	printRes(res, args)
-	// ten := number.Number(10)
-	// res = ten.Add(3).Add(5).Substract(23)
-
-	// fmt.Println(res.Absolute(), ten)
 }
