@@ -16,7 +16,6 @@ func splitArgs(args []string) (operands []float64, operations []string, err erro
 	operations = make([]string, 0)
 
 	for i, a := range args {
-		fmt.Println(a)
 		switch {
 		case i%2 == 0:
 			num, err := strconv.ParseFloat(a, 64)
