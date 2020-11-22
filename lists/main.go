@@ -7,8 +7,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/thangpham7793/headfirstgo/general"
-	"github.com/thangpham7793/headfirstgo/lists/utils"
+	"github.com/headfirstgo/general"
+	"github.com/headfirstgo/lists/utils"
 )
 
 func prettyPrintFloat(num float64) {

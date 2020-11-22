@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	calc "github.com/thangpham7793/headfirstgo/calcl"
-	"github.com/thangpham7793/headfirstgo/dates"
-	"github.com/thangpham7793/headfirstgo/greeting"
-	"github.com/thangpham7793/headfirstgo/greeting/vietnamese"
+	calc "github.com/headfirstgo/calcl"
+	"github.com/headfirstgo/dates"
+	"github.com/headfirstgo/greeting"
+	"github.com/headfirstgo/greeting/vietnamese"
 )
 
 func main() {

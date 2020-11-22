@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/thangpham7793/headfirstgo/general"
-	"github.com/thangpham7793/headfirstgo/votecount/utils"
-	"github.com/thangpham7793/headfirstgo/votecount/votingresult"
+	"github.com/headfirstgo/general"
+	"github.com/headfirstgo/votecount/utils"
+	"github.com/headfirstgo/votecount/votingresult"
 )
 
 func main() {

@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"headfirstgo/calculator/number" //this means it must be inside GOPATH though
+	"github.com/headfirstgo/calculator/number" //this means it must be inside GOPATH though
 )
 
 func splitArgs(args []string) (operands []float64, operations []string, err error) {

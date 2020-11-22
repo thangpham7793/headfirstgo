@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/thangpham7793/headfirstgo/struct/subscriber"
+	"github.com/headfirstgo/struct/subscriber"
 )
 
 //o satisfies interface Stringer if it does what a stringer does
